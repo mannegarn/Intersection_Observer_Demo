@@ -1,0 +1,11 @@
+@media (min-width: 768px) {
+  .my-component {
+    width: 50%;
+  }
+}
+
+body {
+  margin: 0;
+  padding: 0;
+  background-color: rgb(2, 1, 1);
+}
