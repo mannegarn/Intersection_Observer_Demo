@@ -1,9 +1,18 @@
-import { useState } from "react";
+import { useState, useEffect } from "react";
 import "./Header.css";
 
-export default function Header({ imageCount, onImageCountChange }) {
+export default function Header({
+  imageCount,
+  onImageCountChange,
+  onIntObvChange,
+  intObv,
+}) {
   const [isEditing, setIsEditing] = useState(false);
   const [newImageCount, setNewImageCount] = useState(imageCount);
+
+  useEffect(() => {
+    setNewImageCount(imageCount);
+  }, [imageCount]);
 
   const handleImageCountClick = () => {
     setIsEditing(true);
@@ -23,6 +32,10 @@ export default function Header({ imageCount, onImageCountChange }) {
       onImageCountChange(newImageCount);
       setIsEditing(false);
     }
+  };
+
+  const handleToggle = (event) => {
+    onIntObvChange(event.target.checked);
   };
 
   return (
@@ -45,6 +58,15 @@ export default function Header({ imageCount, onImageCountChange }) {
         )}
         Images
       </h1>
+      <div className="toggle-container">
+        <label htmlFor="intObvToggle"> Intersection Observer:</label>
+        <input
+          type="checkbox"
+          id="intObvToggle"
+          checked={intObv}
+          onChange={handleToggle}
+        />
+      </div>
     </header>
   );
 }

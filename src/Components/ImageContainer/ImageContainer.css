@@ -1,3 +1,19 @@
+.image-wrapper {
+  opacity: 0;
+  transform: translateX(200px);
+  transition: opacity 0.5s ease-in-out, transform 0.5s ease-in-out;
+}
+
+.image-wrapper.loaded {
+  opacity: 1;
+  transform: translateX(0);
+}
+
+.placeholder {
+  height: 200px;
+  background-color: #e0e0e0;
+}
+
 .image-container {
   display: flex;
   flex-direction: column;
@@ -9,24 +25,38 @@
 }
 
 .image-wrapper {
-  width: 600px;
-  height: 400px;
-  margin: 20px;
+  max-width: 60vw;
+  height: 40vh;
+  width: auto;
+  margin: 20px auto;
   overflow: hidden;
   border: 5px white;
   display: flex;
   flex-direction: row;
+  padding: 20px;
 }
 
 .image-wrapper img {
-  width: 100%;
   height: 100%;
-  object-fit: cover;
-  padding: 30px;
+  width: auto;
 }
 
 .image-wrapper p {
   color: aliceblue;
   font-size: x-large;
-  margin-top: 5vh;
+  margin: 1px;
+}
+
+@media (max-width: 768px) {
+  .image-wrapper {
+    width: 80%;
+  }
+
+  .image-wrapper img {
+    padding: 20px;
+  }
+
+  .image-wrapper p {
+    font-size: large;
+  }
 }

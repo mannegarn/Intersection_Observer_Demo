@@ -1,11 +1,32 @@
-@media (min-width: 768px) {
-  .my-component {
-    width: 50%;
-  }
-}
-
 body {
   margin: 0;
   padding: 0;
   background-color: rgb(2, 1, 1);
 }
+
+
+@media (max-width: 1200px) {
+  body {
+    
+    padding: 0 10px; 
+}
+
+@media (max-width: 768px) {
+  body {
+
+    padding: 0 5px; 
+    background-color: rgb(
+      10,
+      10,
+      10
+    ); 
+  }
+}
+
+@media (max-width: 480px) {
+  body {
+    
+    padding: 0;
+  }
+}
+  
