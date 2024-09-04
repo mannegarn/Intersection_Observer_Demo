@@ -11,6 +11,7 @@
 
 .placeholder {
   height: 200px;
+  width: 0;
   background-color: #e0e0e0;
 }
 
@@ -26,7 +27,7 @@
 
 .image-wrapper {
   max-width: 60vw;
-  height: 40vh;
+  /*height: 40vh;*/
   width: auto;
   margin: 20px auto;
   overflow: hidden;
@@ -37,8 +38,8 @@
 }
 
 .image-wrapper img {
-  height: 100%;
-  width: auto;
+  height: auto;
+  width: 100%;
 }
 
 .image-wrapper p {
@@ -47,13 +48,14 @@
   margin: 1px;
 }
 
-@media (max-width: 768px) {
+@media (min-width: 768px) {
   .image-wrapper {
     width: 80%;
   }
 
   .image-wrapper img {
     padding: 20px;
+    width: 50%;
   }
 
   .image-wrapper p {

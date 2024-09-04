@@ -73,7 +73,7 @@ export default function ImageContainer({ imageCount, imageURLs, intObv }) {
         ref={(el) => (imageRefs.current[i] = el)}
         data-index={i}
       >
-        <p className="image-number">{i + 1})</p>
+        <p className="image-number">{i + 1}</p>
         {isLoaded ? (
           <img src={url} alt={`Random image ${i + 1}`} />
         ) : (
