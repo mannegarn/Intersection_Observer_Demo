@@ -27,9 +27,9 @@ export default function ImageContainer({ imageCount, imageURLs, intObv }) {
     const options = {
       root: null,
       rootMargin: intObv
-        ? "20px"
+        ? "-50px"
         : document.documentElement.scrollHeight + "px",
-      threshold: 0.1,
+      threshold: 0.5,
     };
 
     if (observer.current) {
